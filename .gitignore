@@ -1,0 +1,8 @@
+# Git Ignore rules for Ayturgan's Portfolio
+
+# Scratch & temporary workspace files
+scratch/
+.idea/
+.vscode/
+*.log
+.DS_Store
