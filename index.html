@@ -9,7 +9,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Outfit:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     /* Design System & Themes */
@@ -35,7 +35,7 @@
       --radius-lg: 12px;
       --radius-md: 8px;
       
-      --font-header: "Space Grotesk", sans-serif;
+      --font-header: "Outfit", "Space Grotesk", sans-serif;
       --font-body: "Manrope", sans-serif;
       --font-mono: "Fira Code", monospace;
     }
@@ -228,6 +228,7 @@
       animation: avatarFloat 4s ease-in-out infinite;
       overflow: hidden;
       transition: all 0.3s ease;
+      cursor: pointer;
     }
 
     .avatar-circle:hover {
@@ -566,22 +567,23 @@
 
     .panel-card-title {
       font-family: var(--font-header);
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       margin-bottom: 18px;
       color: var(--text-primary);
-      display: flex;
-      align-items: center;
-      gap: 10px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       padding-bottom: 10px;
       text-transform: uppercase;
       letter-spacing: 0.03em;
+      line-height: 1.4;
     }
 
     .panel-card-title span.prefix {
       color: var(--color-red);
       font-family: var(--font-mono);
       font-size: 0.9rem;
+      white-space: nowrap;
+      margin-right: 8px;
+      display: inline-block;
     }
 
     /* --- QUEST LOG (EXPERIENCE & PROJECTS) --- */
@@ -745,7 +747,7 @@
 
     .attr-row {
       display: grid;
-      grid-template-columns: 80px auto 1fr;
+      grid-template-columns: 200px 45px 1fr;
       align-items: center;
       gap: 16px;
     }
@@ -756,6 +758,7 @@
       font-weight: 700;
       color: var(--text-muted);
       text-transform: uppercase;
+      white-space: nowrap;
     }
 
     .attr-val {
@@ -1044,6 +1047,53 @@
       transform: scale(1.1);
     }
 
+    /* Avatar Lightbox Modal */
+    .avatar-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .avatar-modal.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .avatar-modal-content {
+      width: min(400px, 90vmin);
+      height: min(400px, 90vmin);
+      border-radius: 50%;
+      border: 3px solid var(--color-red);
+      box-shadow: 0 0 45px var(--color-red-glow);
+      overflow: hidden;
+      transform: scale(0.85);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      cursor: pointer;
+    }
+
+    .avatar-modal.active .avatar-modal-content {
+      transform: scale(1);
+    }
+
+    .avatar-modal-content img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
     /* Keyframes */
     @keyframes pulse {
       0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--color-red-glow); }
@@ -1099,6 +1149,13 @@
       .shell {
         width: min(calc(100% - 16px), var(--max-width));
         margin-top: 10px;
+      }
+      .attr-row {
+        grid-template-columns: 140px 35px 1fr;
+        gap: 8px;
+      }
+      .attr-name {
+        font-size: 0.7rem;
       }
     }
 
@@ -1387,9 +1444,6 @@
             <button class="btn-action accent" type="button" onclick="window.print()">
               <span id="printIcon"></span> <span id="printLabel">Print Resume</span>
             </button>
-            <a class="btn-action" id="pdfLink" href="./output/pdf/ayturgan-karagulova-resume.pdf" target="_blank" rel="noreferrer">
-              <span id="pdfIcon"></span> <span id="pdfLabel">View PDF</span>
-            </a>
           </div>
         </div>
 
@@ -2379,12 +2433,32 @@ print(f<span class="string">"{dev.name} инициализирована как 
 
     // Inject button icons
     document.getElementById("printIcon").innerHTML = svgIcons.print;
-    document.getElementById("pdfIcon").innerHTML = svgIcons.pdf;
 
     const initialLang = localStorage.getItem("resume-lang") || "en";
     setLanguage(initialLang);
     updateSoundButton();
     updateTerminalContent("system.log");
+
+    // --- AVATAR LIGHTBOX INTERACTION ---
+    const avatarCircle = document.querySelector(".avatar-circle");
+    const avatarModal = document.getElementById("avatarModal");
+
+    avatarCircle.addEventListener("click", () => {
+      avatarModal.classList.add("active");
+      sfx.playClick();
+    });
+
+    avatarModal.addEventListener("click", () => {
+      avatarModal.classList.remove("active");
+      sfx.playClick();
+    });
   </script>
+
+  <!-- Avatar Lightbox Modal -->
+  <div class="avatar-modal" id="avatarModal">
+    <div class="avatar-modal-content">
+      <img src="avatar.jpg" alt="Ayturgan Karagulova">
+    </div>
+  </div>
 </body>
 </html>
