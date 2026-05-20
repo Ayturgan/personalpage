@@ -88,10 +88,11 @@
 
     /* --- TOP NAVIGATION BAR --- */
     .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 20px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      align-items: stretch;
+      gap: 12px;
+      padding: 12px 14px;
       border-radius: var(--radius-lg);
       background: rgba(4, 11, 24, 0.65);
       border: 1px solid var(--panel-border);
@@ -101,8 +102,11 @@
 
     .brand {
       display: flex;
-      align-items: center;
-      gap: 12px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      min-width: 0;
+      width: 100%;
     }
 
     .brand-logo {
@@ -114,6 +118,8 @@
       display: flex;
       align-items: center;
       gap: 6px;
+      max-width: 100%;
+      overflow-wrap: anywhere;
     }
 
     .brand-logo::before {
@@ -133,12 +139,18 @@
       letter-spacing: 0.05em;
       text-transform: uppercase;
       font-weight: 600;
+      max-width: 100%;
+      overflow-wrap: anywhere;
+      white-space: normal;
     }
 
     .controls {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: stretch;
+      gap: 8px;
+      width: 100%;
+      min-width: 0;
     }
 
     .lang-switcher,
@@ -149,6 +161,15 @@
 
     .lang-switcher {
       flex-shrink: 0;
+      justify-content: center;
+      width: 100%;
+      max-width: 140px;
+      margin: 0 auto;
+    }
+
+    #soundToggle {
+      width: 100%;
+      justify-content: center;
     }
 
     .btn-toggle {
@@ -188,6 +209,55 @@
     .lang-btn.active {
       color: var(--color-red);
       border-color: var(--color-red);
+    }
+
+    @media (min-width: 901px) {
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 12px 20px;
+      }
+
+      .brand {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        width: auto;
+      }
+
+      .brand-logo,
+      .brand-meta {
+        max-width: none;
+        overflow-wrap: normal;
+      }
+
+      .brand-meta {
+        white-space: nowrap;
+      }
+
+      .controls {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: auto;
+      }
+
+      .controls > * {
+        min-width: 0;
+      }
+
+      .lang-switcher {
+        width: auto;
+        max-width: none;
+        margin: 0;
+        justify-content: flex-start;
+      }
+
+      #soundToggle {
+        width: auto;
+      }
     }
 
     /* --- DEVELOPER DASHBOARD PANEL --- */
@@ -1452,45 +1522,6 @@
 
     /* Mobile adjustments */
     @media (max-width: 900px) {
-      .topbar {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr);
-        align-items: stretch;
-        gap: 12px;
-        padding: 12px 14px;
-      }
-      .brand {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-        min-width: 0;
-        width: 100%;
-      }
-      .brand-logo,
-      .brand-meta {
-        max-width: 100%;
-        overflow-wrap: anywhere;
-      }
-      .brand-meta {
-        white-space: normal;
-      }
-      .controls {
-        width: 100%;
-        min-width: 0;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 8px;
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        align-items: stretch;
-      }
-      .controls > * {
-        min-width: 0;
-      }
-      #soundToggle {
-        width: 100%;
-        justify-content: center;
-      }
       .panel-grid {
         grid-template-columns: 1fr;
       }
@@ -1649,18 +1680,9 @@
       .controls {
         grid-template-columns: 1fr;
       }
-      .lang-switcher,
-      .controls > div {
-        width: 100%;
-        justify-content: center;
-      }
       .lang-switcher .btn-toggle {
         flex: 1 1 0;
         justify-content: center;
-      }
-      .lang-switcher {
-        max-width: 140px;
-        margin: 0 auto;
       }
       .contacts-strip {
         flex-direction: column;
