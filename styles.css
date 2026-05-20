@@ -70,6 +70,11 @@
       text-decoration: none;
     }
 
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
     /* Layout Shell */
     .shell {
       width: min(calc(100% - 32px), var(--max-width));
@@ -362,6 +367,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 12px;
     }
 
     .metric-title {
@@ -371,6 +377,9 @@
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      flex: 1;
+      min-width: 0;
+      overflow-wrap: anywhere;
     }
 
     .metric-value {
@@ -378,6 +387,8 @@
       font-size: 1.3rem;
       font-weight: 700;
       color: var(--text-primary);
+      flex-shrink: 0;
+      text-align: right;
     }
 
     .metric-progress-container {
@@ -461,6 +472,8 @@
       align-items: center;
       gap: 6px;
       transition: all 0.2s ease;
+      min-width: 0;
+      max-width: 100%;
     }
 
     .contact-item:hover {
@@ -477,6 +490,11 @@
       align-items: center;
     }
 
+    .contact-item span:last-child {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
     /* --- NAVIGATION TABS --- */
     .tabs-nav {
       display: flex;
@@ -484,6 +502,7 @@
       border-bottom: 2px solid rgba(255, 42, 95, 0.15);
       padding-bottom: 2px;
       margin-top: 10px;
+      min-width: 0;
     }
 
     .tab-btn {
@@ -499,6 +518,8 @@
       transition: all 0.2s ease;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      min-width: 0;
+      line-height: 1.25;
     }
 
     .tab-btn:hover {
@@ -574,6 +595,10 @@
     }
 
     .panel-card-title {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 6px 10px;
       font-family: var(--font-header);
       font-size: 1.2rem;
       margin-bottom: 18px;
@@ -592,6 +617,11 @@
       white-space: nowrap;
       margin-right: 8px;
       display: inline-block;
+    }
+
+    .panel-card-title > :last-child {
+      min-width: 0;
+      overflow-wrap: anywhere;
     }
 
     /* --- QUEST LOG (EXPERIENCE & PROJECTS) --- */
@@ -631,6 +661,8 @@
       font-family: var(--font-header);
       font-size: 1.15rem;
       color: var(--text-primary);
+      line-height: 1.3;
+      overflow-wrap: anywhere;
     }
 
     .quest-company {
@@ -639,12 +671,14 @@
       color: var(--color-blue);
       margin-top: 2px;
       font-weight: 700;
+      overflow-wrap: anywhere;
     }
 
     .quest-meta {
       text-align: right;
       font-size: 0.78rem;
       color: var(--text-muted);
+      overflow-wrap: anywhere;
     }
 
     .quest-meta strong {
@@ -719,12 +753,15 @@
       font-family: var(--font-header);
       font-size: 1.1rem;
       color: var(--text-primary);
+      line-height: 1.3;
+      overflow-wrap: anywhere;
     }
 
     .project-desc {
       font-size: 0.85rem;
       line-height: 1.6;
       color: var(--text-muted);
+      overflow-wrap: anywhere;
     }
 
     .project-tags {
@@ -743,6 +780,7 @@
       padding: 4px 8px;
       border-radius: 4px;
       font-weight: 600;
+      overflow-wrap: anywhere;
     }
 
     /* Tech stack cards */
@@ -786,6 +824,8 @@
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
     }
 
     .stack-chip-wrap {
@@ -802,9 +842,10 @@
       font-family: var(--font-mono);
       font-size: 0.68rem;
       font-weight: 700;
-      line-height: 1;
+      line-height: 1.2;
       backdrop-filter: blur(8px);
       transition: transform 0.18s ease, filter 0.18s ease;
+      overflow-wrap: anywhere;
     }
 
     .stack-card:hover .stack-chip {
@@ -1019,7 +1060,9 @@
       font-weight: 700;
       color: var(--text-muted);
       text-transform: uppercase;
-      white-space: nowrap;
+      white-space: normal;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
     }
 
     .attr-val {
@@ -1070,6 +1113,7 @@
       color: var(--text-primary);
       font-weight: 600;
       line-height: 1.2;
+      overflow-wrap: anywhere;
     }
 
     .info-rows {
@@ -1095,6 +1139,7 @@
       font-weight: 700;
       font-size: 0.85rem;
       color: var(--text-primary);
+      overflow-wrap: anywhere;
     }
 
     .info-row-val {
@@ -1102,6 +1147,7 @@
       color: var(--text-muted);
       text-align: right;
       line-height: 1.4;
+      overflow-wrap: anywhere;
     }
 
     /* --- TERMINAL STYLE VIEW --- */
@@ -1150,6 +1196,7 @@
       padding: 6px 10px;
       border-radius: 4px;
       transition: all 0.15s ease;
+      overflow-wrap: anywhere;
     }
 
     .file-item:hover {
@@ -1208,16 +1255,38 @@
       font-family: var(--font-mono);
       font-size: 0.72rem;
       color: var(--text-muted);
+      min-width: 0;
+      overflow-wrap: anywhere;
+      text-align: right;
     }
 
     .terminal-body {
       flex: 1;
       padding: 20px;
       overflow-y: auto;
+      overflow-x: auto;
       font-family: var(--font-mono);
       font-size: 0.8rem;
       line-height: 1.6;
       color: var(--color-green);
+    }
+
+    .terminal-body pre {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    html[lang="ru"] .metric-title,
+    html[lang="ru"] .stack-card-title,
+    html[lang="ru"] .item-label,
+    html[lang="ru"] .project-tag,
+    html[lang="ru"] .attr-name {
+      letter-spacing: 0.03em;
+    }
+
+    html[lang="ru"] .panel-card-title,
+    html[lang="ru"] .tab-btn {
+      letter-spacing: 0.02em;
     }
 
     .code-json { color: #f8f8f2; }
@@ -1373,6 +1442,14 @@
 
     /* Mobile adjustments */
     @media (max-width: 900px) {
+      .topbar {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .brand,
+      .controls {
+        min-width: 0;
+      }
       .panel-grid {
         grid-template-columns: 1fr;
       }
@@ -1397,6 +1474,9 @@
       .contacts-strip {
         justify-content: center;
       }
+      .info-row {
+        align-items: flex-start;
+      }
       .terminal-view {
         grid-template-columns: 1fr;
       }
@@ -1406,20 +1486,242 @@
       }
     }
 
-    @media (max-width: 500px) {
-      .hud-title h1 {
-        font-size: 1.4rem;
-      }
+    @media (max-width: 700px) {
       .shell {
-        width: min(calc(100% - 16px), var(--max-width));
+        width: min(calc(100% - 18px), var(--max-width));
         margin-top: 10px;
+        gap: 16px;
+      }
+      .topbar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px 14px;
+      }
+      .brand {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
+      .brand-logo,
+      .brand-meta {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+      }
+      .controls {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .controls > * {
+        min-width: 0;
+      }
+      .btn-toggle {
+        padding: 8px 10px;
+      }
+      .developer-dashboard,
+      .panel-card {
+        padding: 18px;
+      }
+      .developer-dashboard {
+        gap: 18px;
+      }
+      .hud-info {
+        gap: 14px;
+      }
+      .hud-title h1 {
+        font-size: 1.55rem;
+        line-height: 1.12;
+      }
+      .hud-subtitle {
+        font-size: 0.8rem;
+        line-height: 1.4;
+      }
+      .btn-action {
+        width: 100%;
+        justify-content: center;
+      }
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+      .metric-card {
+        padding: 12px 14px;
+      }
+      .tabs-nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+      .tab-btn {
+        min-height: 52px;
+        padding: 12px 14px;
+        border: 1px solid rgba(255, 42, 95, 0.16);
+        border-radius: 12px;
+        background: rgba(4, 11, 24, 0.55);
+        text-align: center;
+        white-space: normal;
+      }
+      .tab-btn.active::after {
+        display: none;
+      }
+      .tab-btn.active {
+        background: rgba(255, 42, 95, 0.08);
+        border-color: rgba(255, 42, 95, 0.45);
+        box-shadow: 0 0 16px rgba(255, 42, 95, 0.14);
+      }
+      .panel-card-title {
+        font-size: 1.02rem;
+      }
+      .panel-card-title span.prefix {
+        font-size: 0.8rem;
+        margin-right: 0;
+      }
+      .quest-card,
+      .project-card {
+        padding: 16px;
+      }
+      .quest-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .quest-meta {
+        text-align: left;
+      }
+      .epic-projects,
+      .stack-grid {
+        grid-template-columns: 1fr;
+      }
+      .stack-card {
+        min-height: auto;
       }
       .attr-row {
-        grid-template-columns: 140px 35px 1fr;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 8px 10px;
+      }
+      .bar-bg {
+        grid-column: 1 / -1;
+      }
+      .info-row {
+        flex-direction: column;
+        gap: 6px;
+      }
+      .info-row-val {
+        text-align: left;
+      }
+      .inventory-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .inventory-slot {
+        aspect-ratio: auto;
+        min-height: 96px;
+      }
+      .terminal-header {
+        padding: 10px 12px;
+        gap: 8px;
+      }
+      .terminal-body {
+        padding: 14px;
+        font-size: 0.75rem;
+        line-height: 1.5;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .topbar {
+        padding: 12px;
+      }
+      .brand-logo {
+        font-size: 0.98rem;
+      }
+      .brand-meta {
+        font-size: 0.68rem;
+      }
+      .hud-title h1 {
+        font-size: 1.32rem;
+      }
+      .developer-dashboard,
+      .panel-card {
+        padding: 16px;
+      }
+      .metric-header {
+        align-items: flex-start;
+      }
+      .metric-value {
+        font-size: 1.1rem;
+      }
+      .metric-desc {
+        font-size: 0.72rem;
+      }
+      .contact-item {
+        width: 100%;
+        justify-content: flex-start;
+        border-radius: 14px;
+      }
+      .tab-btn {
+        font-size: 0.82rem;
+      }
+      .project-tags,
+      .stack-chip-wrap {
+        gap: 7px;
+      }
+      .stack-chip,
+      .project-tag {
+        font-size: 0.64rem;
+      }
+      .attr-row {
+        grid-template-columns: minmax(0, 1fr) auto;
         gap: 8px;
       }
       .attr-name {
-        font-size: 0.7rem;
+        font-size: 0.68rem;
+      }
+      .attr-val {
+        font-size: 0.72rem;
+      }
+      .inventory-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .item-label {
+        font-size: 0.68rem;
+      }
+      .terminal-sidebar,
+      .terminal-body {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      html[lang="ru"] .tab-btn {
+        font-size: 0.78rem;
+      }
+      html[lang="ru"] .metric-title {
+        font-size: 0.64rem;
+      }
+      html[lang="ru"] .stack-card-title {
+        font-size: 0.66rem;
+      }
+      html[lang="ru"] .panel-card-title {
+        font-size: 0.96rem;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .shell {
+        width: min(calc(100% - 12px), var(--max-width));
+      }
+      .developer-dashboard,
+      .panel-card {
+        padding: 14px;
+      }
+      .panel-card-title {
+        font-size: 0.94rem;
+      }
+      .project-card,
+      .quest-card {
+        padding: 14px;
+      }
+      .inventory-grid {
+        grid-template-columns: 1fr 1fr;
       }
     }
 
