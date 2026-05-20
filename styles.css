@@ -141,9 +141,14 @@
       gap: 10px;
     }
 
+    .lang-switcher,
     .controls > div {
       display: flex;
       gap: 4px;
+    }
+
+    .lang-switcher {
+      flex-shrink: 0;
     }
 
     .btn-toggle {
@@ -1448,7 +1453,8 @@
     /* Mobile adjustments */
     @media (max-width: 900px) {
       .topbar {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
         align-items: stretch;
         gap: 12px;
         padding: 12px 14px;
@@ -1458,11 +1464,15 @@
         align-items: flex-start;
         gap: 6px;
         min-width: 0;
+        width: 100%;
       }
       .brand-logo,
       .brand-meta {
         max-width: 100%;
         overflow-wrap: anywhere;
+      }
+      .brand-meta {
+        white-space: normal;
       }
       .controls {
         width: 100%;
@@ -1470,9 +1480,16 @@
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 8px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: stretch;
       }
       .controls > * {
         min-width: 0;
+      }
+      #soundToggle {
+        width: 100%;
+        justify-content: center;
       }
       .panel-grid {
         grid-template-columns: 1fr;
@@ -1630,16 +1647,20 @@
 
     @media (max-width: 640px) {
       .controls {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        align-items: stretch;
+        grid-template-columns: 1fr;
       }
+      .lang-switcher,
       .controls > div {
-        justify-content: flex-end;
-      }
-      #soundToggle {
         width: 100%;
         justify-content: center;
+      }
+      .lang-switcher .btn-toggle {
+        flex: 1 1 0;
+        justify-content: center;
+      }
+      .lang-switcher {
+        max-width: 140px;
+        margin: 0 auto;
       }
       .contacts-strip {
         flex-direction: column;
@@ -1660,6 +1681,7 @@
       }
       .brand-meta {
         font-size: 0.68rem;
+        line-height: 1.45;
       }
       .hud-title h1 {
         font-size: 1.32rem;
