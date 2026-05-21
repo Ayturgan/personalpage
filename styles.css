@@ -1585,6 +1585,10 @@
         font-size: 0.8rem;
         line-height: 1.4;
       }
+      .avatar-circle {
+        width: 88px;
+        height: 88px;
+      }
       .btn-action {
         width: 100%;
         justify-content: center;
@@ -1596,20 +1600,30 @@
         padding: 12px 14px;
       }
       .tabs-nav {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-wrap: wrap;
         gap: 8px;
         border-bottom: none;
-        padding-bottom: 0;
+        padding: 4px 0 10px;
+        margin-top: 4px;
+        position: sticky;
+        top: max(8px, env(safe-area-inset-top));
+        z-index: 5;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.72));
+        backdrop-filter: blur(10px);
       }
       .tab-btn {
-        min-height: 52px;
-        padding: 12px 14px;
+        flex: 1 1 calc(33.333% - 6px);
+        min-height: 64px;
+        padding: 10px 8px;
         border: 1px solid rgba(255, 42, 95, 0.16);
         border-radius: 12px;
         background: rgba(4, 11, 24, 0.55);
         text-align: center;
         white-space: normal;
+        font-size: 0.78rem;
+        line-height: 1.3;
+        overflow-wrap: anywhere;
       }
       .tab-btn.active::after {
         display: none;
@@ -1630,6 +1644,14 @@
       .project-card {
         padding: 16px;
       }
+      .quest-title h3,
+      .project-title {
+        font-size: 1rem;
+      }
+      .quest-objectives li,
+      .project-desc {
+        font-size: 0.82rem;
+      }
       .quest-header {
         flex-direction: column;
         align-items: flex-start;
@@ -1643,6 +1665,10 @@
       }
       .stack-card {
         min-height: auto;
+        padding: 14px;
+      }
+      .stack-chip-wrap {
+        gap: 7px;
       }
       .attr-row {
         grid-template-columns: minmax(0, 1fr) auto;
@@ -1659,11 +1685,33 @@
         text-align: left;
       }
       .inventory-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
       .inventory-slot {
         aspect-ratio: auto;
-        min-height: 96px;
+        min-height: 92px;
+      }
+      .terminal-view {
+        min-height: 0;
+      }
+      .terminal-sidebar {
+        padding: 14px;
+        gap: 12px;
+      }
+      .file-tree {
+        flex-direction: row;
+        gap: 8px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        scrollbar-width: thin;
+      }
+      .file-item {
+        flex: 0 0 auto;
+        min-height: 40px;
+        padding: 9px 12px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 10px;
+        white-space: nowrap;
       }
       .terminal-header {
         padding: 10px 12px;
@@ -1680,6 +1728,9 @@
       .controls {
         grid-template-columns: 1fr;
       }
+      .lang-switcher {
+        max-width: none;
+      }
       .lang-switcher .btn-toggle {
         flex: 1 1 0;
         justify-content: center;
@@ -1690,6 +1741,9 @@
       }
       .contact-item {
         width: 100%;
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 10px;
         justify-content: flex-start;
       }
     }
@@ -1697,6 +1751,10 @@
     @media (max-width: 500px) {
       .topbar {
         padding: 12px;
+      }
+      .shell {
+        width: min(calc(100% - 14px), var(--max-width));
+        gap: 14px;
       }
       .brand-logo {
         font-size: 0.98rem;
@@ -1708,9 +1766,18 @@
       .hud-title h1 {
         font-size: 1.32rem;
       }
+      .avatar-circle {
+        width: 80px;
+        height: 80px;
+      }
       .developer-dashboard,
       .panel-card {
         padding: 16px;
+      }
+      .panel-card-title {
+        gap: 4px 8px;
+        padding-bottom: 8px;
+        margin-bottom: 16px;
       }
       .metric-header {
         align-items: flex-start;
@@ -1727,7 +1794,9 @@
         border-radius: 14px;
       }
       .tab-btn {
-        font-size: 0.82rem;
+        min-height: 58px;
+        font-size: 0.72rem;
+        padding: 8px 6px;
       }
       .project-tags,
       .stack-chip-wrap {
@@ -1748,18 +1817,33 @@
         font-size: 0.72rem;
       }
       .inventory-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: 1fr;
+      }
+      .inventory-slot {
+        min-height: 68px;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 12px;
+        padding: 12px 14px;
+        text-align: left;
+      }
+      .item-icon {
+        margin-bottom: 0;
       }
       .item-label {
-        font-size: 0.68rem;
+        font-size: 0.74rem;
       }
       .terminal-sidebar,
       .terminal-body {
         padding-left: 12px;
         padding-right: 12px;
       }
+      .terminal-sidebar-title,
+      .terminal-tab-name {
+        font-size: 0.66rem;
+      }
       html[lang="ru"] .tab-btn {
-        font-size: 0.78rem;
+        font-size: 0.68rem;
       }
       html[lang="ru"] .metric-title {
         font-size: 0.64rem;
@@ -1776,9 +1860,21 @@
       .shell {
         width: min(calc(100% - 12px), var(--max-width));
       }
+      .topbar,
+      .developer-dashboard,
+      .panel-card {
+        border-radius: 14px;
+      }
       .developer-dashboard,
       .panel-card {
         padding: 14px;
+      }
+      .brand-logo {
+        font-size: 0.92rem;
+      }
+      .btn-toggle {
+        font-size: 0.68rem;
+        padding: 8px 8px;
       }
       .panel-card-title {
         font-size: 0.94rem;
@@ -1787,8 +1883,23 @@
       .quest-card {
         padding: 14px;
       }
+      .tab-btn {
+        min-height: 54px;
+        font-size: 0.68rem;
+      }
+      .quest-title h3,
+      .project-title {
+        font-size: 0.94rem;
+      }
+      .metric-desc,
+      .quest-objectives li,
+      .project-desc,
+      .info-row-label,
+      .info-row-val {
+        font-size: 0.78rem;
+      }
       .inventory-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
       }
     }
 
