@@ -373,7 +373,7 @@
           brandMeta: "System / Active",
           hudSubtitle: "AI Fullstack Developer",
           printLabel: "Print Resume",
-          pdfLabel: "Download PDF",
+          pdfLabel: "Download Resume PDF",
           metric1Label: "Backend Core",
           metric1Desc: "Payments, load testing, server reliability",
           metric2Label: "AI & Product Integrations",
@@ -400,7 +400,7 @@
           brandMeta: "Система / Активна",
           hudSubtitle: "AI Fullstack Developer",
           printLabel: "Печать резюме",
-          pdfLabel: "Скачать PDF",
+          pdfLabel: "Скачать резюме PDF",
           metric1Label: "Основа Бэкенда",
           metric1Desc: "Платежи, нагрузка, надежность серверов",
           metric2Label: "ИИ и Продукты",
@@ -683,6 +683,11 @@
       if (pdfDownload) {
         const suffix = lang === "ru" ? "ru" : "en";
         pdfDownload.href = `output/pdf/ayturgan-karagulova-resume-${suffix}.pdf`;
+        pdfDownload.download = `ayturgan-karagulova-resume-${suffix}.pdf`;
+        pdfDownload.setAttribute(
+          "aria-label",
+          lang === "ru" ? "Скачать резюме PDF" : "Download resume PDF"
+        );
       }
       
       // Update terminal codes if tab matches language
