@@ -373,7 +373,7 @@
           brandMeta: "System / Active",
           hudSubtitle: "AI Fullstack Developer",
           printLabel: "Print Resume",
-          pdfLabel: "View PDF",
+          pdfLabel: "Download PDF",
           metric1Label: "Backend Core",
           metric1Desc: "Payments, load testing, server reliability",
           metric2Label: "AI & Product Integrations",
@@ -400,7 +400,7 @@
           brandMeta: "Система / Активна",
           hudSubtitle: "AI Fullstack Developer",
           printLabel: "Печать резюме",
-          pdfLabel: "Открыть PDF",
+          pdfLabel: "Скачать PDF",
           metric1Label: "Основа Бэкенда",
           metric1Desc: "Платежи, нагрузка, надежность серверов",
           metric2Label: "ИИ и Продукты",
@@ -678,6 +678,12 @@
       renderInventory();
       renderDetails(lang);
       renderEducation(lang);
+
+      const pdfDownload = document.getElementById("pdfDownload");
+      if (pdfDownload) {
+        const suffix = lang === "ru" ? "ru" : "en";
+        pdfDownload.href = `output/pdf/ayturgan-karagulova-resume-${suffix}.pdf`;
+      }
       
       // Update terminal codes if tab matches language
       updateTerminalContent(activeFile);
@@ -912,6 +918,7 @@ print(f<span class="string">"{dev.name} инициализирована как 
 
     // Inject button icons
     document.getElementById("printIcon").innerHTML = svgIcons.print;
+    document.getElementById("pdfIcon").innerHTML = svgIcons.pdf;
 
     const initialLang = localStorage.getItem("resume-lang") || "en";
     setLanguage(initialLang);

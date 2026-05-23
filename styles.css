@@ -2051,6 +2051,29 @@
         padding: 12px !important;
       }
 
+      .panel-card-title,
+      .quest-header,
+      .quest-objectives,
+      .project-title,
+      .project-desc,
+      .project-tags,
+      .stack-card-title,
+      .stack-chip-wrap,
+      .inventory-slot,
+      .info-row,
+      .attr-row {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+
+      .quests-list,
+      .epic-projects,
+      .stack-grid,
+      .inventory-grid {
+        break-inside: auto !important;
+        page-break-inside: auto !important;
+      }
+
       .panel-card-title {
         font-size: 0.95rem !important;
         color: #111111 !important;
@@ -2064,6 +2087,8 @@
         border: 1px solid #eeeeee !important;
         border-left: 2px solid #111111 !important;
         padding: 10px !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
       }
 
       .quest-title h3 {
@@ -2090,6 +2115,8 @@
         background: #ffffff !important;
         border: 1px solid #dddddd !important;
         padding: 8px !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
       }
 
       .project-card::before {
@@ -2115,6 +2142,8 @@
         border: 1px solid #dddddd !important;
         box-shadow: none !important;
         padding: 8px !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
       }
 
       .stack-card::before {
