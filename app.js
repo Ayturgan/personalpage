@@ -702,7 +702,7 @@
       const pdfDownload = document.getElementById("pdfDownload");
       if (pdfDownload) {
         const suffix = lang === "ru" ? "ru" : "en";
-        pdfDownload.href = `output/pdf/ayturgan-karagulova-resume-${suffix}.pdf?v=20261029d`;
+        pdfDownload.href = `output/pdf/ayturgan-karagulova-resume-${suffix}.pdf?v=20261029e`;
         pdfDownload.download = `ayturgan-karagulova-resume-${suffix}.pdf`;
         pdfDownload.setAttribute(
           "aria-label",
@@ -713,7 +713,7 @@
       const portfolioDownload = document.getElementById("portfolioPdfDownload");
       if (portfolioDownload) {
         const suffix = lang === "ru" ? "ru" : "en";
-        portfolioDownload.href = `output/pdf/ayturgan-karagulova-portfolio-${suffix}.pdf?v=20261029d`;
+        portfolioDownload.href = `output/pdf/ayturgan-karagulova-portfolio-${suffix}.pdf?v=20261029e`;
         portfolioDownload.download = `ayturgan-karagulova-portfolio-${suffix}.pdf`;
         portfolioDownload.setAttribute(
           "aria-label",
