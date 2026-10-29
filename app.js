@@ -64,111 +64,107 @@
       ],
       focusGroups: {
         en: [
-          { title: "Languages", tone: "language", items: ["Python", "TypeScript", "JavaScript", "C++", "SQL"] },
-          { title: "Frontend", tone: "frontend", items: ["React", "Next.js", "Vite", "Tailwind CSS", "Bootstrap", "Framer Motion", "React Router", "Zustand", "HTML5", "CSS3"] },
-          { title: "Backend", tone: "backend", items: ["FastAPI", "Django", "Flask", "Express", "Node.js", "REST API", "Uvicorn", "Pydantic", "WebSockets"] },
-          { title: "Data & Storage", tone: "data", items: ["PostgreSQL", "MySQL", "SQLite", "Redis", "SQLAlchemy", "Alembic", "Elasticsearch", "Celery"] },
-          { title: "AI / ML / CV", tone: "ai", items: ["OpenAI", "PyTorch", "NumPy", "Pandas", "Scikit-learn", "Pillow", "OpenCV"] },
-          { title: "Automation & QA", tone: "automation", items: ["Scrapy", "Playwright", "Scrapy Playwright", "Selenium", "Postman", "aiohttp", "httpx", "Jinja2"] },
-          { title: "Messaging & Platforms", tone: "platform", items: ["Aiogram", "Python Telegram Bot", "Telegram Mini Apps", "Yandex Games", "Unreal Engine 5", "LiveKit", "Socket.IO"] },
-          { title: "Infra & Deploy", tone: "infra", items: ["Docker", "Docker Compose", "Nginx", "Linux", "Git", "GitHub", "DigitalOcean", "GitHub Pages", "DevOps", "Server Ops"] }
+          { title: "Languages", tone: "language", items: ["Python", "PHP", "JavaScript", "TypeScript", "SQL", "Dart", "MQL5"] },
+          { title: "Backend & APIs", tone: "backend", items: ["Django", "Django REST Framework", "FastAPI", "Flask", "Laravel", "REST APIs", "WebSockets"] },
+          { title: "Web & Mobile", tone: "frontend", items: ["React", "Vue", "Nuxt", "Vite", "Flutter", "HTML", "CSS"] },
+          { title: "Data & Queues", tone: "data", items: ["PostgreSQL", "PostGIS", "MySQL", "SQLite", "Redis", "Celery", "Elasticsearch"] },
+          { title: "AI, Speech & Vision", tone: "ai", items: ["OpenAI", "Ollama", "Faster-Whisper", "XTTS", "OpenCV", "MediaPipe", "LiveKit"] },
+          { title: "Scraping & QA", tone: "automation", items: ["Scrapy", "Playwright", "Pytest", "PHPUnit", "Postman"] },
+          { title: "AI Coding Agents", tone: "platform", items: ["OpenAI Codex", "OpenCode", "Antigravity", "Aider", "GitHub Copilot", "ChatGPT", "Gemini"] },
+          { title: "Infrastructure", tone: "infra", items: ["Docker", "Docker Compose", "Nginx", "Linux", "Git", "GitHub Actions"] }
         ],
         ru: [
-          { title: "Языки", tone: "language", items: ["Python", "TypeScript", "JavaScript", "C++", "SQL"] },
-          { title: "Frontend", tone: "frontend", items: ["React", "Next.js", "Vite", "Tailwind CSS", "Bootstrap", "Framer Motion", "React Router", "Zustand", "HTML5", "CSS3"] },
-          { title: "Backend", tone: "backend", items: ["FastAPI", "Django", "Flask", "Express", "Node.js", "REST API", "Uvicorn", "Pydantic", "WebSockets"] },
-          { title: "Данные и хранилища", tone: "data", items: ["PostgreSQL", "MySQL", "SQLite", "Redis", "SQLAlchemy", "Alembic", "Elasticsearch", "Celery"] },
-          { title: "AI / ML / CV", tone: "ai", items: ["OpenAI", "PyTorch", "NumPy", "Pandas", "Scikit-learn", "Pillow", "OpenCV"] },
-          { title: "Автоматизация и QA", tone: "automation", items: ["Scrapy", "Playwright", "Scrapy Playwright", "Selenium", "Postman", "aiohttp", "httpx", "Jinja2"] },
-          { title: "Боты и платформы", tone: "platform", items: ["Aiogram", "Python Telegram Bot", "Telegram Mini Apps", "Yandex Games", "Unreal Engine 5", "LiveKit", "Socket.IO"] },
-          { title: "Инфраструктура", tone: "infra", items: ["Docker", "Docker Compose", "Nginx", "Linux", "Git", "GitHub", "DigitalOcean", "GitHub Pages", "DevOps", "Server Ops"] }
+          { title: "Языки", tone: "language", items: ["Python", "PHP", "JavaScript", "TypeScript", "SQL", "Dart", "MQL5"] },
+          { title: "Backend и API", tone: "backend", items: ["Django", "Django REST Framework", "FastAPI", "Flask", "Laravel", "REST API", "WebSockets"] },
+          { title: "Web и мобильная разработка", tone: "frontend", items: ["React", "Vue", "Nuxt", "Vite", "Flutter", "HTML", "CSS"] },
+          { title: "Данные и очереди", tone: "data", items: ["PostgreSQL", "PostGIS", "MySQL", "SQLite", "Redis", "Celery", "Elasticsearch"] },
+          { title: "ИИ, речь и компьютерное зрение", tone: "ai", items: ["OpenAI", "Ollama", "Faster-Whisper", "XTTS", "OpenCV", "MediaPipe", "LiveKit"] },
+          { title: "Парсинг и тестирование", tone: "automation", items: ["Scrapy", "Playwright", "Pytest", "PHPUnit", "Postman"] },
+          { title: "ИИ-агенты для разработки", tone: "platform", items: ["OpenAI Codex", "OpenCode", "Antigravity", "Aider", "GitHub Copilot", "ChatGPT", "Gemini"] },
+          { title: "Инфраструктура", tone: "infra", items: ["Docker", "Docker Compose", "Nginx", "Linux", "Git", "GitHub Actions"] }
         ]
       },
       experience: {
         en: [
           {
-            role: "Middle Python Developer",
+            role: "Python Backend Developer",
             company: ".beam",
-            period: "Jun 2025 - Present",
+            period: "Jun 2025 - Oct 2026",
             location: "Company",
             bullets: [
-              "Develop and support production projects, websites, backend services, and server environments across several products.",
-              "Extended a large API-driven service for ordering special equipment through a mobile app, covering marketplace-like logic for machinery, drivers, and truck transport workflows.",
-              "Built a QR payment intermediary from scratch and helped validate payment-flow stability under load with 200+ concurrent users.",
-              "Handled server and network migration tasks including IP architecture reconfiguration, RAM allocation tuning, and troubleshooting complex production builds."
+              "Developed and maintained production backend services and administrative tools across several products.",
+              "Worked on the SpecTech Django/PostGIS platform for equipment and freight orders, including order responses and role-aware administration.",
+              "Hardened Celery/Redis task handling so broker failures would not block order flows, and added regression coverage.",
+              "Supported Docker releases, production fixes, and server operations."
             ]
           },
           {
-            role: "Python Developer",
-            company: "Photo Studio",
+            role: "Python Developer - Client Prototype",
+            company: "PhotoBeautyBot",
             period: "Nov 2024 - Apr 2025",
-            location: "Product",
+            location: "Commercial Prototype",
             bullets: [
-              "Developed a Telegram bot for photo processing focused on appearance enhancement, filters, and document-ready formatting.",
-              "Worked on image processing logic and product delivery for a practical, user-facing automation workflow.",
-              "Used Python tooling around bot flows, media processing, and backend persistence."
+              "Built a Telegram photo-processing bot with guided upload flows, image filters, and media handling.",
+              "The prototype was ready for client delivery; the client stopped the project before launch."
             ]
           },
           {
-            role: "Middle Fullstack Developer",
-            company: "ZuloCoin",
+            role: "Full-Stack Developer - Client Prototype",
+            company: "ZyloCoin",
             period: "Jun 2023 - Aug 2024",
-            location: "Remote",
+            location: "Commercial Prototype",
             bullets: [
-              "Developed a Telegram crypto game and Mini App with full client-server logic and a React-based frontend.",
-              "Worked across backend, bot logic, product flows, and frontend integration as part of the full development cycle.",
-              "Contributed to a game-like user experience inside the Telegram ecosystem."
+              "Built a Telegram Mini App with React, Django, user profiles, tasks, referral flows, and TON Connect wallet interfaces.",
+              "The client stopped the project before public launch."
             ]
           },
           {
-            role: "Junior Python Developer",
+            role: "Python Developer - Freelance",
             company: "Self-employed",
             period: "Oct 2022 - May 2023",
             location: "Freelance",
             bullets: [
               "Built REST APIs using FastAPI and Django for client projects and internal tools.",
               "Created Telegram bots for automation, integrations, and parsing tasks.",
-              "Delivered practical backend solutions end-to-end, from implementation to deployment."
+              "Delivered backend features and Telegram bots for client projects."
             ]
           }
         ],
         ru: [
           {
-            role: "Middle Python Developer",
+            role: "Python Backend Developer",
             company: ".beam",
-            period: "Июнь 2025 - Наст. время",
+            period: "Июнь 2025 - Октябрь 2026",
             location: "Компания",
             bullets: [
-              "Разрабатываю и поддерживаю продакшн-проекты, сайты, backend-сервисы и серверную инфраструктуру для нескольких продуктов.",
-              "Дорабатываю большой API-сервис для заказа спецтехники через мобильное приложение: бизнес-логика, похожая на маркетплейс техники, водителей и грузового транспорта.",
-              "С нуля создала сайт-посредник для QR-платежей и участвовала в проверке стабильности платежных сценариев под нагрузкой 200+ одновременных пользователей.",
-              "Выполняла сетевые и серверные миграции: перенастройка IP-архитектуры, аллокация RAM и troubleshooting сложных production-сборок."
+              "Разрабатывала и поддерживала production backend-сервисы и административные инструменты нескольких продуктов.",
+              "Работала над платформой SpecTech на Django/PostGIS: API заказов спецтехники и перевозок, отклики исполнителей и администрирование с учётом ролей.",
+              "Укрепила обработку задач Celery/Redis, чтобы сбои брокера не блокировали сценарии заказов, и добавила регрессионное покрытие.",
+              "Поддерживала Docker-релизы, исправления production-ошибок и серверную эксплуатацию."
             ]
           },
           {
-            role: "Python Developer",
-            company: "Photo Studio",
+            role: "Python-разработчица - клиентский прототип",
+            company: "PhotoBeautyBot",
             period: "Ноябрь 2024 - Апрель 2025",
-            location: "Продукт",
+            location: "Коммерческий прототип",
             bullets: [
-              "Разработала Telegram-бота для обработки фото: улучшение внешности, фильтры и подготовка изображений под документы.",
-              "Работала над логикой обработки изображений и упаковкой удобного пользовательского сценария.",
-              "Использовала Python-инструменты для bot-flow, медиа-обработки и backend-хранения данных."
+              "С нуля создала Telegram-бота для обработки фото: сценарии загрузки, меню, фильтры и сохранение изображений.",
+              "Прототип был подготовлен к передаче, но заказчик остановил проект до запуска."
             ]
           },
           {
-            role: "Middle Fullstack Developer",
-            company: "ZuloCoin",
+            role: "Full-Stack Developer - клиентский прототип",
+            company: "ZyloCoin",
             period: "Июнь 2023 - Август 2024",
-            location: "Удаленно",
+            location: "Коммерческий прототип",
             bullets: [
-              "Разрабатывала Telegram-криптоигру и Mini App с полной клиент-серверной логикой и фронтендом на React.",
-              "Работала на стыке backend, bot-логики, продуктовых сценариев и frontend-интеграции в рамках полного цикла разработки.",
-              "Участвовала в создании игрового пользовательского опыта внутри экосистемы Telegram."
+              "С нуля создала Telegram Mini App на React и Django: профили, задания, реферальные сценарии и интерфейс кошелька с TON Connect.",
+              "Заказчик остановил коммерческий проект до публичного запуска."
             ]
           },
           {
-            role: "Junior Python Developer",
+            role: "Python Developer - фриланс",
             company: "Самозанятость",
             period: "Октябрь 2022 - Май 2023",
             location: "Фриланс",
@@ -183,177 +179,213 @@
       projects: {
         en: [
           {
-            name: "Faceless Shorts Pipeline",
-            description: "Automated YouTube shorts pipeline for historical and science facts. Covers script generation, narration prompts, voiceover steps, visual prompt packs, and repeatable content assembly for faceless publishing workflows.",
-            tags: ["LLM Pipeline", "YouTube Automation", "Prompt Engineering", "TTS", "Content Ops"]
+            name: "SpecTech",
+            description: "Production marketplace for special equipment, freight and service crews. My backend work covered order and responder APIs, role-aware admin flows, Celery/Redis failure handling, and regression tests.",
+            tags: ["Commercial", "Production", "Python", "Django", "PostGIS"],
+            links: [{ href: "https://specgo.i7.kg/", label: { en: "Live platform", ru: "Сайт платформы" } }]
           },
           {
-            name: "QR Payment Intermediary",
-            description: "Web product built from scratch to simplify commission-free payments with interbank QR flows, plus backend validation and load scenarios proving stable behavior at 200+ concurrent users.",
-            tags: ["Python", "Payments", "Load Testing", "Backend", "Reliability"]
+            name: "Advocato",
+            description: "Production workspace for lawyers and legal teams. Contributed backend and product work across role-based access, case documents, search, client portals, CI/CD, and operations.",
+            tags: ["Commercial", "Production", "Python", "Django", "PostgreSQL"],
+            links: [{ href: "https://advocato.i7.kg/ais/", label: { en: "Live platform", ru: "Сайт платформы" } }]
           },
           {
-            name: "Real Estate Aggregator",
-            description: "Large parsing-driven platform that collects the latest property listings from multiple sources and turns them into one searchable, fresh feed.",
-            tags: ["Parsing", "FastAPI", "PostgreSQL", "Data pipelines", "Web"]
+            name: "Estate Parser",
+            description: "Built from scratch: a multi-source real estate collection system with a Scrapy pipeline, FastAPI service, job controls, duplicate detection for listings and photos, search, and analytics.",
+            tags: ["Personal Project", "Built from Scratch", "Python", "FastAPI", "Scrapy"]
           },
           {
-            name: "LLM Game Master Bot",
-            description: "Interactive quest engine for branching stories and GM-led sessions. Manages dynamic prompts, decision memory, session state, and narrative responses for replayable AI adventures.",
-            tags: ["LLM", "State Management", "Prompt Design", "Interactive Fiction", "Bots"]
+            name: "Pointora",
+            description: "Team-built loyalty and payment platform for venues. My contributions span Laravel API features, admin and partner portals, the guest Flutter app, OTP, wallet flows, and notifications.",
+            tags: ["Commercial", "In Development", "Laravel", "React", "Flutter"]
           },
           {
-            name: "Yandex Games Mini Apps",
-            description: "Mini web apps and quiz games for Yandex Games, including a multi-difficulty The Last of Us trivia experience with progression logic and lightweight frontend gameplay.",
-            tags: ["Yandex Games", "Mini Apps", "JavaScript", "Game Logic", "Frontend"]
+            name: "AppMagic Parser",
+            description: "Built an authenticated browser collection pipeline for AppMagic metrics, with historical PostgreSQL data, analytics API and dashboard, scheduled refreshes, and session management.",
+            tags: ["Personal Project", "Python", "FastAPI", "Playwright", "PostgreSQL"]
           },
           {
-            name: "Second Dawn",
-            description: "AI game prototype in Unreal Engine 5.7 focused on AI NPC interactions. Includes a realtime TypeScript backend, WebSocket communication, structured NPC prompt architecture, short-term memory, and voice pipeline experiments.",
-            tags: ["Unreal Engine 5.7", "TypeScript", "WebSockets", "Gemini", "OpenAI STT", "AI NPCs"]
+            name: "Amanat / EKurulush",
+            description: "Production construction procurement system for requests, tenders, suppliers, contracts, deliveries, claims, acceptance acts, payments, and archives. Contributed to process implementation and release verification.",
+            tags: ["Commercial", "Production", "Laravel", "Nuxt", "MySQL"],
+            links: [{ href: "https://ekurulush.e7.kg/", label: { en: "Live platform", ru: "Сайт платформы" } }]
           },
           {
-            name: "InfoCompanion",
-            description: "Telegram bot focused on practical information access: quick lookup flows, translator features, and daily quote delivery in one lightweight assistant experience.",
-            tags: ["Python", "Telegram Bot", "Automation", "Utilities", "Aiogram"]
+            name: "Virtual Makeup / AI Beauty",
+            description: "Computer vision portrait and webcam app for virtual makeup and appearance effects. Built from scratch around face landmarks, masks, segmentation, and image processing; the commercial project paused at the client side.",
+            tags: ["Commercial Prototype", "Client Project", "Python", "OpenCV", "MediaPipe"]
+          },
+          {
+            name: "ZyloCoin / Telegram Mini App",
+            description: "Telegram game and Mini App with user profiles, tasks, referrals, balance flows, and TON Connect wallet interfaces. The commercial project did not launch after the client stopped it.",
+            tags: ["Commercial Prototype", "Client Project", "Django", "React", "TON Connect"]
+          },
+          {
+            name: "BBI Telegram Bot",
+            description: "Commercial Telegram bot built from scratch for catalog and request flows, payment details, administrator controls, contacts, and statistics. The client project stopped before launch.",
+            tags: ["Commercial Prototype", "Client Project", "Python", "Telegram Bot", "SQLite"]
+          },
+          {
+            name: "PhotoBeautyBot",
+            description: "Commercial Telegram photo-processing bot built from scratch with guided menus, upload and media handling, and image filters. The client project stopped before launch.",
+            tags: ["Commercial Prototype", "Client Project", "Python", "Aiogram", "OpenCV"]
+          },
+          {
+            name: "Local Voice AI Assistant",
+            description: "Built from scratch as a local text and voice assistant with speech recognition, Ollama/Mistral responses, XTTS speech output, conversation controls, and voice profile selection.",
+            tags: ["Personal Project", "FastAPI", "Faster-Whisper", "Ollama", "XTTS"]
+          },
+          {
+            name: "Streaming AI Voice Chatbot",
+            description: "Real-time voice and text sessions with LiveKit, configurable conversation scenarios, voice profiles, streaming audio processing, and a React control interface.",
+            tags: ["Personal Project", "LiveKit", "FastAPI", "React", "WebSockets"]
+          },
+          {
+            name: "AI Car Call Centre",
+            description: "Real-time voice assistant prototype for car enquiries, with tool calls to look up vehicles by VIN or add vehicle records through an API and SQLite database.",
+            tags: ["Personal Project", "LiveKit Agents", "OpenAI Realtime", "Flask", "React"]
+          },
+          {
+            name: "Bybit Price Analyzer",
+            description: "Scans Bybit futures, detects support and resistance patterns, filters sideways markets, plots candidate signals, and sends charts and alerts through Telegram.",
+            tags: ["Personal Project", "Python", "Bybit API", "CCXT", "Telegram Bot"]
+          },
+          {
+            name: "Overturn X",
+            description: "Modular MetaTrader 5 Expert Advisor with a state machine, trade gateway, basket and trailing logic, persistence, and daily risk controls.",
+            tags: ["Personal Project", "MQL5", "MetaTrader 5", "Risk Controls", "Expert Advisor"]
           },
           {
             name: "PixHarbor",
-            description: "Gallery-style web app where users can upload photos, browse visual content, and interact through likes and comments.",
-            tags: ["Python", "Web App", "Media Uploads", "Community Features", "Frontend"]
+            description: "One of my first projects: a Flask community gallery with user profiles, image uploads, posts, editing, and comments.",
+            tags: ["Personal Project", "First Projects", "Python", "Flask", "SQLite"]
           },
           {
             name: "Swiftalk Chat Application",
-            description: "Realtime chat messenger prototype built around direct communication flows, with future wallet integration planned as part of the product direction.",
-            tags: ["Chat", "Realtime", "WebSockets", "Messaging", "Product"]
-          },
-          {
-            name: "Zylocoin",
-            description: "Public-facing product website for a Telegram crypto game ecosystem. The core gameplay code is confidential, but the shipped product layer reflects fullstack and product packaging work.",
-            tags: ["Telegram", "Crypto Game", "Landing", "Product", "Confidential Core"]
+            description: "One of my first projects: a Django messenger with user accounts, real-time WebSocket chats, file attachments, and notifications.",
+            tags: ["Personal Project", "First Projects", "Django", "Channels", "WebSockets"]
           }
         ],
         ru: [
           {
-            name: "Faceless Shorts Pipeline",
-            description: "Автоматизированный пайплайн для YouTube Shorts с историческими и научными фактами. Покрывает генерацию сценариев, промптов для озвучки, визуальных промптов и сборку повторяемого faceless-контента.",
-            tags: ["LLM Pipeline", "YouTube Automation", "Prompt Engineering", "TTS", "Content Ops"]
+            name: "SpecTech",
+            description: "Рабочий маркетплейс спецтехники, перевозок и бригад. В моей backend-работе: API заказов и откликов, админка с правами по ролям, обработка сбоев Celery/Redis и регрессионные тесты.",
+            tags: ["Коммерческий", "В проде", "Python", "Django", "PostGIS"],
+            links: [{ href: "https://specgo.i7.kg/", label: { en: "Live platform", ru: "Сайт платформы" } }]
           },
           {
-            name: "QR Payment Intermediary",
-            description: "Веб-продукт, созданный с нуля для удобных QR-платежей без комиссии через межбанковские сценарии, с отдельной проверкой backend-стабильности под нагрузкой 200+ одновременных пользователей.",
-            tags: ["Python", "Payments", "Load Testing", "Backend", "Reliability"]
+            name: "Advocato",
+            description: "Рабочая система для адвокатов и юридических команд. Внесла вклад в backend и продукт: права доступа, документы дел, поиск, клиентский портал, CI/CD и эксплуатация.",
+            tags: ["Коммерческий", "В проде", "Python", "Django", "PostgreSQL"],
+            links: [{ href: "https://advocato.i7.kg/ais/", label: { en: "Live platform", ru: "Сайт платформы" } }]
           },
           {
-            name: "Real Estate Aggregator",
-            description: "Крупная parsing-платформа, которая собирает свежие объявления о недвижимости из множества источников и превращает их в единый обновляемый каталог.",
-            tags: ["Parsing", "FastAPI", "PostgreSQL", "Data pipelines", "Web"]
+            name: "Estate Parser",
+            description: "С нуля создала систему сбора объявлений о недвижимости из разных источников: Scrapy-парсеры, FastAPI, управление заданиями, поиск дублей объявлений и фото, поиск и аналитика.",
+            tags: ["Личный проект", "С нуля", "Python", "FastAPI", "Scrapy"]
           },
           {
-            name: "LLM Game Master Bot",
-            description: "Интерактивный движок для квестов и ветвящихся сюжетов в стиле game master. Управляет динамическими промптами, памятью решений, состоянием сессии и нарративными ответами.",
-            tags: ["LLM", "State Management", "Prompt Design", "Interactive Fiction", "Bots"]
+            name: "Pointora",
+            description: "Командная платформа лояльности и платежей для заведений. Мой вклад: Laravel API, кабинеты администратора и партнёра, Flutter-приложение гостя, OTP, кошелёк и уведомления.",
+            tags: ["Коммерческий", "В разработке", "Laravel", "React", "Flutter"]
           },
           {
-            name: "Yandex Games Mini Apps",
-            description: "Мини-приложения и квиз-игры для Яндекс.Игр, включая викторину по The Last of Us с несколькими уровнями сложности, прогрессией и легкой frontend-логикой.",
-            tags: ["Yandex Games", "Mini Apps", "JavaScript", "Game Logic", "Frontend"]
+            name: "AppMagic Parser",
+            description: "Создала авторизованный сбор данных AppMagic: историю метрик в PostgreSQL, API и панель аналитики, обновление по расписанию и управление браузерной сессией.",
+            tags: ["Личный проект", "Python", "FastAPI", "Playwright", "PostgreSQL"]
           },
           {
-            name: "Second Dawn",
-            description: "AI-игра на Unreal Engine 5.7 с упором на AI-driven NPC interaction. Внутри realtime TypeScript backend, WebSocket-связь, архитектура промптов для NPC, short-term memory и эксперименты с voice pipeline.",
-            tags: ["Unreal Engine 5.7", "TypeScript", "WebSockets", "Gemini", "OpenAI STT", "AI NPCs"]
+            name: "Amanat / EKurulush",
+            description: "Рабочая система строительных закупок: заявки, тендеры, поставщики, договоры, поставки, претензии, акты, оплаты и архив. Участвовала в реализации процессов и проверке релиза.",
+            tags: ["Коммерческий", "В проде", "Laravel", "Nuxt", "MySQL"],
+            links: [{ href: "https://ekurulush.e7.kg/", label: { en: "Live platform", ru: "Сайт платформы" } }]
           },
           {
-            name: "InfoCompanion",
-            description: "Telegram-бот для быстрого доступа к информации: полезные lookup-сценарии, переводчик и ежедневные цитаты в формате удобного ассистента.",
-            tags: ["Python", "Telegram Bot", "Automation", "Utilities", "Aiogram"]
+            name: "Virtual Makeup / AI Beauty",
+            description: "Приложение компьютерного зрения для обработки портретов и изображения с веб-камеры, виртуального макияжа и эффектов внешности. Сделано с нуля; коммерческую разработку остановил заказчик.",
+            tags: ["Коммерческий прототип", "Проект заказчика", "Python", "OpenCV", "MediaPipe"]
+          },
+          {
+            name: "ZyloCoin / Telegram Mini App",
+            description: "Telegram-игра и Mini App с профилями, заданиями, рефералами, балансом и интерфейсом TON Connect. Коммерческий проект не вышел после остановки со стороны заказчика.",
+            tags: ["Коммерческий прототип", "Проект заказчика", "Django", "React", "TON Connect"]
+          },
+          {
+            name: "BBI Telegram Bot",
+            description: "Коммерческий Telegram-бот, написанный с нуля: каталог и заявки, платёжные реквизиты, управление администраторами, контактами и статистикой. Заказчик остановил проект до запуска.",
+            tags: ["Коммерческий прототип", "Проект заказчика", "Python", "Telegram Bot", "SQLite"]
+          },
+          {
+            name: "PhotoBeautyBot",
+            description: "Коммерческий Telegram-бот для обработки фотографий, написанный с нуля: меню, загрузка и хранение фото, управление состояниями диалога и фильтры. Заказчик остановил проект до запуска.",
+            tags: ["Коммерческий прототип", "Проект заказчика", "Python", "Aiogram", "OpenCV"]
+          },
+          {
+            name: "Локальный голосовой ИИ-ассистент",
+            description: "С нуля созданный локальный текстовый и голосовой ассистент: распознавание речи, ответы Ollama/Mistral, озвучка XTTS, управление диалогом и выбор голосового профиля.",
+            tags: ["Личный проект", "FastAPI", "Faster-Whisper", "Ollama", "XTTS"]
+          },
+          {
+            name: "Streaming AI Voice Chatbot",
+            description: "Голосовые и текстовые сессии в реальном времени на LiveKit, настраиваемые сценарии, голосовые профили, потоковая обработка аудио и React-интерфейс управления.",
+            tags: ["Личный проект", "LiveKit", "FastAPI", "React", "WebSockets"]
+          },
+          {
+            name: "AI Car Call Centre",
+            description: "Прототип голосового помощника для консультаций по автомобилям. Через вызов функций ищет машину по VIN или добавляет запись через API и базу SQLite.",
+            tags: ["Личный проект", "LiveKit Agents", "OpenAI Realtime", "Flask", "React"]
+          },
+          {
+            name: "Bybit Price Analyzer",
+            description: "Сканирует фьючерсы Bybit, ищет ценовые уровни, фильтрует боковой рынок, строит графики сигналов и отправляет уведомления в Telegram.",
+            tags: ["Личный проект", "Python", "Bybit API", "CCXT", "Telegram Bot"]
+          },
+          {
+            name: "Overturn X",
+            description: "Модульный советник MetaTrader 5 с конечным автоматом, торговым шлюзом, логикой корзины и трейлинга, сохранением состояния и дневными ограничениями риска.",
+            tags: ["Личный проект", "MQL5", "MetaTrader 5", "Контроль риска", "Expert Advisor"]
           },
           {
             name: "PixHarbor",
-            description: "Веб-приложение в формате галереи, где пользователи могут загружать фотографии, просматривать контент и взаимодействовать через лайки и комментарии.",
-            tags: ["Python", "Web App", "Media Uploads", "Community Features", "Frontend"]
+            description: "Один из моих первых проектов: Flask-галерея с аккаунтами, профилями, загрузкой изображений, публикациями, редактированием и комментариями.",
+            tags: ["Личный проект", "Первые проекты", "Python", "Flask", "SQLite"]
           },
           {
             name: "Swiftalk Chat Application",
-            description: "Прототип realtime-мессенджера с упором на прямое общение между пользователями и заделом под будущую wallet-интеграцию как часть продуктового направления.",
-            tags: ["Chat", "Realtime", "WebSockets", "Messaging", "Product"]
-          },
-          {
-            name: "Zylocoin",
-            description: "Публичный продуктовый сайт для экосистемы Telegram-криптоигры. Основной игровой код конфиденциален, но продуктовый слой отражает fullstack- и product-работу.",
-            tags: ["Telegram", "Crypto Game", "Landing", "Product", "Confidential Core"]
+            description: "Один из моих первых проектов: Django-мессенджер с аккаунтами, чатами в реальном времени через WebSocket, вложениями и уведомлениями.",
+            tags: ["Личный проект", "Первые проекты", "Django", "Channels", "WebSockets"]
           }
         ]
       },
       attributes: {
         en: [
-          { name: "INT (Backend Core)", value: "93%", desc: "API design, payments, databases, data systems", width: "93%" },
-          { name: "DEX (Velocity & CI/CD)", value: "88%", desc: "Fast delivery, Docker, deployment, product launches", width: "88%" },
-          { name: "VIT (System Reliability)", value: "90%", desc: "Load testing, migrations, logs, production troubleshooting", width: "90%" },
-          { name: "AGI (Fullstack Integrations)", value: "80%", desc: "Mini apps, React, game and web integrations", width: "80%" },
-          { name: "LUK (AI Prototyping)", value: "94%", desc: "LLM workflows, content generation, interactive AI systems", width: "94%" }
+          { name: "Backend development", desc: "APIs, business workflows, databases, and production services" },
+          { name: "Data collection & search", desc: "Web scraping, data normalization, duplicate detection, and analytics" },
+          { name: "Integrations & reliability", desc: "Task queues, external APIs, regression coverage, and release fixes" },
+          { name: "Full-stack delivery", desc: "Admin and partner portals, mobile API integration, and Docker deployment" },
+          { name: "AI application prototypes", desc: "Voice pipelines, local LLM integration, and computer vision" }
         ],
         ru: [
-          { name: "INT (Основа Бэкенда)", value: "93%", desc: "Проектирование API, платежи, базы данных, data systems", width: "93%" },
-          { name: "DEX (Скорость & CI/CD)", value: "88%", desc: "Быстрый запуск, Docker, деплой и вывод продуктов", width: "88%" },
-          { name: "VIT (Надежность Систем)", value: "90%", desc: "Нагрузочное тестирование, миграции, логи, troubleshooting", width: "90%" },
-          { name: "AGI (Фулстэк интеграция)", value: "80%", desc: "Mini Apps, React, игровые и веб-интеграции", width: "80%" },
-          { name: "LUK (Интеграция ИИ)", value: "94%", desc: "LLM-воркфлоу, генерация контента, интерактивные AI-системы", width: "94%" }
+          { name: "Backend-разработка", desc: "API, бизнес-процессы, базы данных и production-сервисы" },
+          { name: "Сбор и поиск данных", desc: "Парсинг сайтов, нормализация данных, поиск дублей и аналитика" },
+          { name: "Интеграции и надёжность", desc: "Очереди задач, внешние API, регрессионное покрытие и исправления релизов" },
+          { name: "Full-stack разработка", desc: "Админ-панели, кабинеты партнёров, мобильные API и Docker-развёртывание" },
+          { name: "Прототипы приложений с ИИ", desc: "Голосовые конвейеры, локальные LLM и компьютерное зрение" }
         ]
       },
-      inventory: [
-        { icon: "python", label: "Python" },
-        { icon: "typescript", label: "TypeScript" },
-        { icon: "javascript", label: "JavaScript" },
-        { icon: "fastapi", label: "FastAPI" },
-        { icon: "django", label: "Django" },
-        { icon: "flask", label: "Flask" },
-        { icon: "express", label: "Express" },
-        { icon: "nodejs", label: "Node.js" },
-        { icon: "restapi", label: "REST API" },
-        { icon: "react", label: "React" },
-        { icon: "nextjs", label: "Next.js" },
-        { icon: "tailwind", label: "Tailwind CSS" },
-        { icon: "bootstrap", label: "Bootstrap" },
-        { icon: "postgresql", label: "PostgreSQL" },
-        { icon: "mysql", label: "MySQL" },
-        { icon: "sqlite", label: "SQLite" },
-        { icon: "sqlalchemy", label: "SQLAlchemy" },
-        { icon: "redis", label: "Redis" },
-        { icon: "docker", label: "Docker" },
-        { icon: "nginx", label: "Nginx" },
-        { icon: "linux", label: "Linux" },
-        { icon: "git", label: "Git" },
-        { icon: "scrapy", label: "Scrapy/Parser" },
-        { icon: "playwright", label: "Playwright" },
-        { icon: "selenium", label: "Selenium" },
-        { icon: "postman", label: "Postman" },
-        { icon: "openai", label: "OpenAI / LLM" },
-        { icon: "pytorch", label: "PyTorch" },
-        { icon: "aiogram", label: "Aiogram" },
-        { icon: "telegram", label: "Telegram Mini Apps" },
-        { icon: "yandex", label: "Yandex Games" },
-        { icon: "websocket", label: "WebSockets" },
-        { icon: "livekit", label: "LiveKit" },
-        { icon: "digitalocean", label: "DigitalOcean" },
-        { icon: "githubpages", label: "GitHub Pages" },
-        { icon: "payments", label: "Payments" },
-        { icon: "cicd", label: "CI/CD" },
-        { icon: "unreal", label: "UE5/Unreal" }
-      ],
       details: {
         en: [
           { label: "Kyrgyz", value: "Native Speaker" },
           { label: "Russian", value: "Fluent" },
           { label: "English", value: "Technical comprehension & documentation, spoken in progress" },
-          { label: "Active Roles", value: "Backend, AI automations, content pipelines, mini games, server ops" }
+          { label: "Focus", value: "Backend APIs, data collection, production support, AI integrations" }
         ],
         ru: [
           { label: "Кыргызский", value: "Родной" },
           { label: "Русский", value: "Свободно" },
           { label: "Английский", value: "Понимание документации и текстов, разговорная практика в процессе" },
-          { label: "Активные роли", value: "Бэкенд, AI-автоматизация, контент-пайплайны, мини-игры, серверная инфраструктура" }
+          { label: "Основные направления", value: "Backend API, сбор данных, production-поддержка, интеграции с ИИ" }
         ]
       },
       education: {
@@ -370,58 +402,52 @@
       },
       copy: {
         en: {
-          brandMeta: "System / Active",
-          hudSubtitle: "AI Fullstack Developer",
-          printLabel: "Print Resume",
-          pdfLabel: "Download Resume PDF",
-          metric1Label: "Backend Core",
-          metric1Desc: "Payments, load testing, server reliability",
-          metric2Label: "AI & Product Integrations",
-          metric2Desc: "LLM agents, content pipelines, Mini Apps",
-          metric3Label: "Professional Journey",
-          metric3Desc: "Active software engineering since 2022",
-          workTitle: "Completed & Active Campaigns",
-          highlightTitle: "Positioning Profile",
-          highlightHeader: "Honest, modern, and product-focused.",
-          highlightBody: "This profile highlights my ability to ship real products fast: load-tested payment flows, AI content pipelines, production parsers, mini apps, and experimental game systems.",
-          focusTitle: "Active Skill Tree",
+          brandMeta: "Developer portfolio",
+          hudSubtitle: "Python Backend Developer",
+          printLabel: "Print Portfolio",
+          pdfLabel: "Download CV (2 pages)",
+          portfolioPdfLabel: "Download Full Portfolio",
+          metric1Label: "Backend development",
+          metric1Desc: "APIs, databases and reliable services",
+          metric2Label: "AI & automation",
+          metric2Desc: "Voice assistants, data and web tools",
+          metric3Label: "Experience",
+          metric3Desc: "Commercial and client projects since 2022",
+          workTitle: "Professional experience",
+          focusTitle: "Skills & technologies",
           projectsTitle: "Featured Projects",
-          statsSheetTitle: "Specs",
-          inventoryTitle: "Equipped Tech Stack",
-          profileTitle: "Identity Specifications",
-          academyTitle: "Academy Background",
-          consoleTitle: "System Directory Viewer",
-          footerText: "System active. Ready for new collaborative opportunities.",
+          otherProjectsTitle: "Other projects",
+          statsSheetTitle: "Areas of work",
+          profileTitle: "Languages & focus",
+          academyTitle: "Education",
+          footerText: "Python backend development · APIs · AI integrations",
           tabBtnQuests: "Experience",
-          tabBtnCharacter: "Skills & Specs",
-          tabBtnTerminal: "System Logs"
+          tabBtnCharacter: "Specs",
+          tabBtnProjects: "Projects"
         },
         ru: {
-          brandMeta: "Система / Активна",
-          hudSubtitle: "AI Fullstack Developer",
-          printLabel: "Печать резюме",
-          pdfLabel: "Скачать резюме PDF",
-          metric1Label: "Основа Бэкенда",
-          metric1Desc: "Платежи, нагрузка, надежность серверов",
-          metric2Label: "ИИ и Продукты",
-          metric2Desc: "LLM-агенты, контент-пайплайны, Mini Apps",
-          metric3Label: "Опыт Работы",
-          metric3Desc: "Активная разработка программных продуктов с 2022 года",
-          workTitle: "Активные и завершенные проекты",
-          highlightTitle: "Профиль Разработчика",
-          highlightHeader: "Честно, современно и по делу.",
-          highlightBody: "Профиль показывает меня как инженера, который быстро доводит идеи до работающих продуктов: платежные сценарии под нагрузкой, AI-контентные пайплайны, продакшн-парсеры, mini apps и игровые эксперименты.",
-          focusTitle: "Активный стек технологий",
+          brandMeta: "Портфолио разработчика",
+          hudSubtitle: "Python Backend Developer",
+          printLabel: "Печать портфолио",
+          pdfLabel: "Скачать резюме · 2 страницы",
+          portfolioPdfLabel: "Скачать полное портфолио",
+          metric1Label: "Backend-разработка",
+          metric1Desc: "API, базы данных и серверные сервисы",
+          metric2Label: "ИИ и автоматизация",
+          metric2Desc: "Голосовые ассистенты, данные и веб-инструменты",
+          metric3Label: "Опыт",
+          metric3Desc: "Коммерческие и клиентские проекты с 2022 года",
+          workTitle: "Опыт работы",
+          focusTitle: "Навыки и технологии",
           projectsTitle: "Избранные проекты",
-          statsSheetTitle: "Характеристики",
-          inventoryTitle: "Инвентарь технологий",
-          profileTitle: "Спецификации личности",
-          academyTitle: "Академическое образование",
-          consoleTitle: "Директория файловой системы",
-          footerText: "Система готова к новым масштабным проектам и сотрудничеству.",
+          otherProjectsTitle: "Другие проекты",
+          statsSheetTitle: "Направления работы",
+          profileTitle: "Языки и специализация",
+          academyTitle: "Образование",
+          footerText: "Python backend · API · интеграции с ИИ",
           tabBtnQuests: "Опыт работы",
-          tabBtnCharacter: "Навыки и профиль",
-          tabBtnTerminal: "Логи системы"
+          tabBtnCharacter: "Характеристики",
+          tabBtnProjects: "Проекты"
         }
       }
     };
@@ -580,9 +606,12 @@
     };
 
     const renderProjects = (lang) => {
-      const wrap = document.getElementById("projectsGrid");
-      wrap.innerHTML = "";
-      resume.projects[lang].forEach((p) => {
+      const featuredWrap = document.getElementById("featuredProjectsGrid");
+      const otherWrap = document.getElementById("otherProjectsGrid");
+      const projects = resume.projects[lang];
+      const featured = projects.slice(0, 6);
+      const other = projects.slice(6);
+      const cardMarkup = (p) => {
         const card = document.createElement("article");
         card.className = "project-card";
         card.innerHTML = `
@@ -592,9 +621,18 @@
             ${p.tags.map((t) => `<span class="project-tag">${t}</span>`).join("")}
           </div>
         `;
+        if (p.links?.length) {
+          const links = document.createElement("div");
+          links.className = "project-links";
+          links.innerHTML = p.links.map((link) => `<a href="${link.href}" target="_blank" rel="noreferrer">${link.label[lang]} ↗</a>`).join("");
+          card.appendChild(links);
+        }
         card.addEventListener("mouseenter", () => sfx.playHover());
-        wrap.appendChild(card);
-      });
+        return card;
+      };
+      featuredWrap.replaceChildren(...featured.map(cardMarkup));
+      otherWrap.replaceChildren(...other.map(cardMarkup));
+      document.getElementById("otherProjectsTitle").textContent = `${resume.copy[lang].otherProjectsTitle} (${other.length})`;
     };
 
     const renderAttributes = (lang) => {
@@ -603,30 +641,13 @@
       resume.attributes[lang].forEach((attr) => {
         const row = document.createElement("div");
         row.className = "attr-row";
+        const name = attr.name.replace(/^[A-Z]+\s+\((.*)\)$/, "$1");
         row.innerHTML = `
-          <div class="attr-name" title="${attr.desc}">${attr.name}</div>
-          <div class="attr-val">${attr.value}</div>
-          <div class="bar-bg" style="height: 8px;">
-            <div class="bar-fill red" style="width: ${attr.width}"></div>
-          </div>
+          <div class="attr-name">${name}</div>
+          <p class="attr-desc">${attr.desc}</p>
         `;
         row.addEventListener("mouseenter", () => sfx.playHover());
         wrap.appendChild(row);
-      });
-    };
-
-    const renderInventory = () => {
-      const wrap = document.getElementById("inventoryGrid");
-      wrap.innerHTML = "";
-      resume.inventory.forEach((item) => {
-        const slot = document.createElement("div");
-        slot.className = "inventory-slot";
-        slot.innerHTML = `
-          <div class="item-icon">${svgIcons[item.icon]}</div>
-          <div class="item-label">${item.label}</div>
-        `;
-        slot.addEventListener("mouseenter", () => sfx.playHover());
-        wrap.appendChild(slot);
       });
     };
 
@@ -675,23 +696,30 @@
       renderFocus(lang);
       renderProjects(lang);
       renderAttributes(lang);
-      renderInventory();
       renderDetails(lang);
       renderEducation(lang);
 
       const pdfDownload = document.getElementById("pdfDownload");
       if (pdfDownload) {
         const suffix = lang === "ru" ? "ru" : "en";
-        pdfDownload.href = `output/pdf/ayturgan-karagulova-resume-${suffix}.pdf`;
+        pdfDownload.href = `output/pdf/ayturgan-karagulova-resume-${suffix}.pdf?v=20261029d`;
         pdfDownload.download = `ayturgan-karagulova-resume-${suffix}.pdf`;
         pdfDownload.setAttribute(
           "aria-label",
           lang === "ru" ? "Скачать резюме PDF" : "Download resume PDF"
         );
       }
-      
-      // Update terminal codes if tab matches language
-      updateTerminalContent(activeFile);
+
+      const portfolioDownload = document.getElementById("portfolioPdfDownload");
+      if (portfolioDownload) {
+        const suffix = lang === "ru" ? "ru" : "en";
+        portfolioDownload.href = `output/pdf/ayturgan-karagulova-portfolio-${suffix}.pdf?v=20261029d`;
+        portfolioDownload.download = `ayturgan-karagulova-portfolio-${suffix}.pdf`;
+        portfolioDownload.setAttribute(
+          "aria-label",
+          lang === "ru" ? "Скачать полное портфолио PDF" : "Download full portfolio PDF"
+        );
+      }
 
       // Sync active buttons
       document.querySelectorAll(".lang-btn").forEach((btn) => {
@@ -718,127 +746,6 @@
       tab.addEventListener("mouseenter", () => sfx.playHover());
     });
 
-    // --- TERMINAL FILE CONTROLS ---
-    let activeFile = "system.log";
-    const fileItems = document.querySelectorAll(".file-item");
-    const termBody = document.getElementById("terminalBody");
-    const termTabName = document.getElementById("terminalTabName");
-
-    const terminalDocs = {
-      en: {
-        "system.log": `<div class="terminal-prompt"><span class="user">aiturgan@karagulova</span>:<span class="loc">~</span>$ cat system.log</div>
-[   0.000000] Booting Developer Portfolio System - Version 4.2.0-stable
-[   0.082490] CPU: Python Fullstack Core V8 running at peak performance
-[   0.148102] Core memory initialized: FastAPI & Django frameworks loaded successfully
-[   0.281489] Loading databases... PostgreSQL connected [OK]
-[   0.312984] Loading cache layers... Redis connection established [OK]
-[   0.490214] Initializing AI system connection. Gemini and OpenAI APIs linked
-[   0.612849] Loading game engine links... Unreal Engine 5.7 bridges operational
-[   0.781023] System status: ACTIVE and ready for new campaigns.
-[   0.940214] Welcome back, Programmer. Active user: Ayturgan Karagulova.`,
-        "skills.json": `<div class="terminal-prompt"><span class="user">aiturgan@karagulova</span>:<span class="loc">~</span>$ cat skills.json</div>
-<pre class="code-json">{
-  <span class="key">"languages"</span>: [<span class="string">"Python"</span>, <span class="string">"JavaScript"</span>, <span class="string">"TypeScript"</span>, <span class="string">"C++"</span>],
-  <span class="key">"backend"</span>: {
-    <span class="key">"frameworks"</span>: [<span class="string">"FastAPI"</span>, <span class="string">"Django"</span>, <span class="string">"Flask"</span>],
-    <span class="key">"data"</span>: [<span class="string">"PostgreSQL"</span>, <span class="string">"Redis"</span>, <span class="string">"SQLite"</span>]
-  },
-  <span class="key">"frontend"</span>: {
-    <span class="key">"frameworks"</span>: [<span class="string">"React"</span>, <span class="string">"HTML5"</span>, <span class="string">"CSS3"</span>, <span class="string">"VanillaJS"</span>]
-  },
-  <span class="key">"infrastructure"</span>: [<span class="string">"Docker"</span>, <span class="string">"Nginx"</span>, <span class="string">"Linux"</span>, <span class="string">"CI/CD"</span>],
-  <span class="key">"specializations"</span>: {
-    <span class="key">"ai_integration"</span>: <span class="boolean">true</span>,
-    <span class="key">"game_dev_ue5"</span>: <span class="boolean">true</span>,
-    <span class="key">"telegram_bots"</span>: <span class="boolean">true</span>,
-    <span class="key">"data_parsing"</span>: <span class="boolean">true</span>
-  }
-}</pre>`,
-        "developer.py": `<div class="terminal-prompt"><span class="user">aiturgan@karagulova</span>:<span class="loc">~</span>$ python3 -m developer</div>
-<pre class="code-py"><span class="keyword">class</span> <span class="def">Developer</span>:
-    <span class="keyword">def</span> <span class="def">__init__</span>(self):
-        self.name = <span class="string">"Ayturgan Karagulova"</span>
-        self.role = <span class="string">"AI Fullstack Developer"</span>
-        self.xp_years = <span class="number">4</span>  <span class="comment"># Started in 2022</span>
-        self.hobbies = [<span class="string">"Coding"</span>, <span class="string">"Gaming"</span>, <span class="string">"Automation"</span>]
-
-    <span class="keyword">def</span> <span class="def">get_status</span>(self):
-        <span class="keyword">return</span> {
-            <span class="string">"level"</span>: <span class="string">"Middle"</span>,
-            <span class="string">"focus"</span>: <span class="string">"Building robust backend and game-like experiences"</span>
-        }
-
-dev = Developer()
-print(f<span class="string">"{dev.name} initialized as {dev.get_status()['level']} developer!"</span>)
-<span class="comment"># Output: Ayturgan Karagulova initialized as Middle developer!</span></pre>`
-      },
-      ru: {
-        "system.log": `<div class="terminal-prompt"><span class="user">aiturgan@karagulova</span>:<span class="loc">~</span>$ cat system.log</div>
-[   0.000000] Загрузка Системы Портфолио - Версия 4.2.0-stable
-[   0.082490] CPU: Бэкенд-ядро Python V8 работает на полную мощность
-[   0.148102] Инициализация памяти: модули FastAPI и Django успешно импортированы
-[   0.281489] Подключение базы данных... PostgreSQL [OK]
-[   0.312984] Подключение кэширования... Сервер Redis [OK]
-[   0.490214] Инициализация ИИ-цепочек. API Gemini и OpenAI связаны
-[   0.612849] Связь с игровым движком... Мосты Unreal Engine 5.7 активны
-[   0.781023] Состояние системы: АКТИВНО, готова к новым кампаниям.
-[   0.940214] Добро пожаловать, Программист. Пользователь: Айтурган Карагулова.`,
-        "skills.json": `<div class="terminal-prompt"><span class="user">aiturgan@karagulova</span>:<span class="loc">~</span>$ cat skills.json</div>
-<pre class="code-json">{
-  <span class="key">"языки"</span>: [<span class="string">"Python"</span>, <span class="string">"JavaScript"</span>, <span class="string">"TypeScript"</span>, <span class="string">"C++"</span>],
-  <span class="key">"бэкенд"</span>: {
-    <span class="key">"фреймворки"</span>: [<span class="string">"FastAPI"</span>, <span class="string">"Django"</span>, <span class="string">"Flask"</span>],
-    <span class="key">"данные"</span>: [<span class="string">"PostgreSQL"</span>, <span class="string">"Redis"</span>, <span class="string">"SQLite"</span>]
-  },
-  <span class="key">"фронтенд"</span>: {
-    <span class="key">"фреймворки"</span>: [<span class="string">"React"</span>, <span class="string">"HTML5"</span>, <span class="string">"CSS3"</span>, <span class="string">"VanillaJS"</span>]
-  },
-  <span class="key">"инфраструктура"</span>: [<span class="string">"Docker"</span>, <span class="string">"Nginx"</span>, <span class="string">"Linux"</span>, <span class="string">"CI/CD"</span>],
-  <span class="key">"специализация"</span>: {
-    <span class="key">"интеграция_ии"</span>: <span class="boolean">true</span>,
-    <span class="key">"разработка_игр_ue5"</span>: <span class="boolean">true</span>,
-    <span class="key">"телеграм_боты"</span>: <span class="boolean">true</span>,
-    <span class="key">"парсеры_данных"</span>: <span class="boolean">true</span>
-  }
-}</pre>`,
-        "developer.py": `<div class="terminal-prompt"><span class="user">aiturgan@karagulova</span>:<span class="loc">~</span>$ python3 -m developer</div>
-<pre class="code-py"><span class="keyword">class</span> <span class="def">Developer</span>:
-    <span class="keyword">def</span> <span class="def">__init__</span>(self):
-        self.name = <span class="string">"Айтурган Карагулова"</span>
-        self.role = <span class="string">"AI Fullstack Developer"</span>
-        self.xp_years = <span class="number">4</span>  <span class="comment"># Старт в 2022 году</span>
-        self.hobbies = [<span class="string">"Код"</span>, <span class="string">"Игры"</span>, <span class="string">"Автоматизация"</span>]
-
-    <span class="keyword">def</span> <span class="def">get_status</span>(self):
-        <span class="keyword">return</span> {
-            <span class="string">"level"</span>: <span class="string">"Middle"</span>,
-            <span class="string">"focus"</span>: <span class="string">"Создание бэкенда и игрового опыта"</span>
-        }
-
-dev = Developer()
-print(f<span class="string">"{dev.name} инициализирована как {dev.get_status()['level']} разработчик!"</span>)
-<span class="comment"># Вывод: Айтурган Карагулова инициализирована как Middle разработчик!</span></pre>`
-      }
-    };
-
-    const updateTerminalContent = (filename) => {
-      const currentLang = document.documentElement.lang || "en";
-      termBody.innerHTML = terminalDocs[currentLang][filename];
-      termTabName.textContent = filename;
-    };
-
-    fileItems.forEach((item) => {
-      item.addEventListener("click", () => {
-        fileItems.forEach((i) => i.classList.remove("active"));
-        item.classList.add("active");
-        
-        activeFile = item.dataset.file;
-        updateTerminalContent(activeFile);
-        sfx.playClick();
-      });
-      item.addEventListener("mouseenter", () => sfx.playHover());
-    });
-
     // --- LANGUAGE BUTTON TRIGGERS ---
     document.querySelectorAll(".lang-btn").forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -848,79 +755,7 @@ print(f<span class="string">"{dev.name} инициализирована как 
       btn.addEventListener("mouseenter", () => sfx.playHover());
     });
 
-    // --- DIGITAL SPACE MATRIX CANVAS ---
-    const canvas = document.getElementById("spaceCanvas");
-    const ctx = canvas.getContext("2d");
-
-    let width = (canvas.width = window.innerWidth);
-    let height = (canvas.height = window.innerHeight);
-
-    window.addEventListener("resize", () => {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
-    });
-
-    // Interactive tech space grid
-    const particles = [];
-    const particleCount = 45;
-
-    class Particle {
-      constructor() {
-        this.reset();
-      }
-
-      reset() {
-        this.x = Math.random() * width;
-        this.y = Math.random() * height;
-        this.size = Math.random() * 2 + 1;
-        this.speedX = Math.random() * 0.4 - 0.2;
-        this.speedY = Math.random() * 0.4 - 0.2;
-        this.color = Math.random() > 0.85 ? "rgba(255, 42, 95, 0.4)" : "rgba(0, 162, 255, 0.2)";
-      }
-
-      update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-
-        if (this.x < 0 || this.x > width || this.y < 0 || this.y > height) {
-          this.reset();
-        }
-      }
-
-      draw() {
-        ctx.fillStyle = this.color;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-      }
-    }
-
-    for (let i = 0; i < particleCount; i++) {
-      particles.push(new Particle());
-    }
-
-    const animateSpace = () => {
-      ctx.clearRect(0, 0, width, height);
-
-      // Space Grid removed for clean, non-straining premium visual style
-      // Keeping only the smooth starfield particles for visual excellence
-
-      // Draw active binary-hacker particles
-      particles.forEach((p) => {
-        p.update();
-        p.draw();
-      });
-
-      requestAnimationFrame(animateSpace);
-    };
-    animateSpace();
-
     // --- INITIALIZE APPLICATION STATE ---
-    // Inject folder and file icons
-    document.getElementById("folderIcon").innerHTML = svgIcons.folder;
-    document.getElementById("fileIcon1").innerHTML = svgIcons.file;
-    document.getElementById("fileIcon2").innerHTML = svgIcons.filePy;
-
     // Inject button icons
     document.getElementById("printIcon").innerHTML = svgIcons.print;
     document.getElementById("pdfIcon").innerHTML = svgIcons.pdf;
@@ -928,7 +763,6 @@ print(f<span class="string">"{dev.name} инициализирована как 
     const initialLang = localStorage.getItem("resume-lang") || "en";
     setLanguage(initialLang);
     updateSoundButton();
-    updateTerminalContent("system.log");
 
     // --- AVATAR LIGHTBOX INTERACTION ---
     const avatarCircle = document.querySelector(".avatar-circle");
